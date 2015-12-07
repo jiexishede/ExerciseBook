@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AutoLayout Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6z-DR-SwU">
+                                <rect key="frame" x="216" y="99" width="168" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkU-Yu-LHs">
+                                <rect key="frame" x="127.5" y="144" width="345" height="2"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="42G-hT-FtJ"/>
+                                    <constraint firstAttribute="width" constant="345" id="yZz-gj-m0B"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1j-Cg-qsL">
+                                <rect key="frame" x="210" y="184" width="180" height="60"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2Bw-mU-s9Y"/>
+                                    <constraint firstAttribute="width" constant="180" id="wG9-eT-ycJ"/>
+                                </constraints>
+                                <state key="normal" title="登录"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="登录之前请阅读" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8U-i8-lFh">
+                                <rect key="frame" x="223" y="283" width="119" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z1j-Cg-qsL" firstAttribute="top" secondItem="k6z-DR-SwU" secondAttribute="bottom" constant="64.5" id="Ixl-I3-N3a"/>
+                            <constraint firstItem="k6z-DR-SwU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kau-KF-pvQ"/>
+                            <constraint firstItem="T8U-i8-lFh" firstAttribute="centerX" secondItem="z1j-Cg-qsL" secondAttribute="centerX" id="R6U-bi-cs4"/>
+                            <constraint firstItem="k6z-DR-SwU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U5R-IV-DPf"/>
+                            <constraint firstItem="WkU-Yu-LHs" firstAttribute="top" secondItem="k6z-DR-SwU" secondAttribute="bottom" constant="24.5" id="Xgh-f1-7FI"/>
+                            <constraint firstItem="WkU-Yu-LHs" firstAttribute="centerX" secondItem="k6z-DR-SwU" secondAttribute="centerX" id="dBd-j1-cIi"/>
+                            <constraint firstItem="k6z-DR-SwU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="79" id="gx2-oU-cA1"/>
+                            <constraint firstItem="z1j-Cg-qsL" firstAttribute="centerX" secondItem="k6z-DR-SwU" secondAttribute="centerX" id="iAl-ey-djk"/>
+                            <constraint firstItem="T8U-i8-lFh" firstAttribute="top" secondItem="z1j-Cg-qsL" secondAttribute="bottom" constant="39" id="nC9-9e-HoQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lineView" destination="WkU-Yu-LHs" id="8qv-cn-jFH"/>
+                        <outlet property="lineViewWidthConstraint" destination="yZz-gj-m0B" id="H1n-KY-8tZ"/>
+                        <outlet property="loginButton" destination="z1j-Cg-qsL" id="SPD-2y-OrZ"/>
+                        <outlet property="readBeforeLogin" destination="T8U-i8-lFh" id="4tJ-64-obr"/>
+                        <outlet property="topTitleLabel" destination="k6z-DR-SwU" id="hYm-J9-dTH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="275"/>
+        </scene>
+    </scenes>
+</document>
