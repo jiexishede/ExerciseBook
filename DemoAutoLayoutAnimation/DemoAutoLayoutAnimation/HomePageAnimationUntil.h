@@ -17,4 +17,6 @@
 
 + (void)viewMaskAnimation:(UIView *)animateView withBeginTime:(NSTimeInterval)beginTime;
 
++ (void)registerButtonWidthAnimation:(UIButton *)button withView:(UIView *)view andProgress:(CGFloat)progress;
+
 @end

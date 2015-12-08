@@ -45,4 +45,27 @@
 
 }
 
++ (void)registerButtonWidthAnimation:(UIButton *)button withView:(UIView *)view andProgress:(CGFloat)progress
+{
+    static CAShapeLayer *layer = nil;
+    if (!button.layer.mask) {
+        layer = [CAShapeLayer layer];
+        layer.path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, CGRectGetWidth(button.bounds) * progress, CGRectGetHeight(button.bounds))].CGPath;
+        layer.fillColor = [UIColor whiteColor].CGColor;
+        button.layer.mask = layer;
+    }else
+    {
+        CGPathRef path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, CGRectGetWidth(button.bounds) * progress, CGRectGetHeight(button.bounds))].CGPath;
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
+        animation.duration = 0.25;
+        animation.fromValue = (id)layer.path;
+        animation.toValue = (__bridge id)path;
+        animation.removedOnCompletion = YES;
+        [layer addAnimation:animation forKey:@"shapeLayerPath"];
+        layer.path = path;
+    }
+    
+}
+
+
 @end
