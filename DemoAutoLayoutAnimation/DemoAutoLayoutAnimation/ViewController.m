@@ -39,6 +39,15 @@ static CGFloat const kLineWith = 345.0;
         [HomePageAnimationUntil animateWithConstraints:_lineViewWidthConstraint constant:kLineWith onTheMap:self.view];
     });
     [HomePageAnimationUntil viewMaskAnimation:_readBeforeLogin withBeginTime:0];
+   }
+
+- (void)viewDidAppear:(BOOL)animated{
+    _loginButton.hidden = NO;
+    for (int i = 0; i < 6; i ++) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * i * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [HomePageAnimationUntil registerButtonWidthAnimation:_loginButton withView:self.view andProgress:0.2* i];
+        });
+    }
 }
 
 - (void)didReceiveMemoryWarning {

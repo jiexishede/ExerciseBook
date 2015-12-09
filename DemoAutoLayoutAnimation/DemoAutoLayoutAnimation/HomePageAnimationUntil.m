@@ -29,7 +29,6 @@
     
     CGPathRef beginPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 0, CGRectGetHeight(animateView.bounds))].CGPath;
     CGPathRef endPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, CGRectGetWidth(animateView.bounds), CGRectGetHeight(animateView.bounds))].CGPath;
-    
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.fillColor = [UIColor whiteColor].CGColor;
     layer.path = beginPath;
