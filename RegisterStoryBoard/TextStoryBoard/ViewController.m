@@ -7,12 +7,21 @@
 //
 
 #import "ViewController.h"
+#import "RegisterTableViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+- (IBAction)login:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"RegisterTableViewContrller" bundle:[NSBundle mainBundle] ];
+    UINavigationController *navC  = storyboard.instantiateInitialViewController;
+    
+    [self  presentViewController:navC animated:NO completion:nil];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

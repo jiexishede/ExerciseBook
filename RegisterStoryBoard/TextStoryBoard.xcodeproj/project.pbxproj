@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821675F71C200CF00017916F /* RegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821675F61C200CF00017916F /* RegisterTableViewController.m */; };
+		821675FD1C200F450017916F /* RegisterTableViewContrller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821675FC1C200F450017916F /* RegisterTableViewContrller.storyboard */; };
+		821676001C2011E80017916F /* PersonInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821675FF1C2011E80017916F /* PersonInformationTableViewController.m */; };
 		822E3F1E1C1FF88600696457 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 822E3F1D1C1FF88600696457 /* main.m */; };
 		822E3F211C1FF88600696457 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 822E3F201C1FF88600696457 /* AppDelegate.m */; };
 		822E3F241C1FF88600696457 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822E3F231C1FF88600696457 /* ViewController.m */; };
@@ -35,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		821675F51C200CF00017916F /* RegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewController.h; sourceTree = "<group>"; };
+		821675F61C200CF00017916F /* RegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewController.m; sourceTree = "<group>"; };
+		821675FC1C200F450017916F /* RegisterTableViewContrller.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterTableViewContrller.storyboard; sourceTree = "<group>"; };
+		821675FE1C2011E80017916F /* PersonInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInformationTableViewController.h; sourceTree = "<group>"; };
+		821675FF1C2011E80017916F /* PersonInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInformationTableViewController.m; sourceTree = "<group>"; };
 		822E3F191C1FF88600696457 /* TextStoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextStoryBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822E3F1D1C1FF88600696457 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		822E3F1F1C1FF88600696457 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +114,11 @@
 				822E3F221C1FF88600696457 /* ViewController.h */,
 				822E3F231C1FF88600696457 /* ViewController.m */,
 				822E3F251C1FF88600696457 /* Main.storyboard */,
+				821675FC1C200F450017916F /* RegisterTableViewContrller.storyboard */,
+				821675F51C200CF00017916F /* RegisterTableViewController.h */,
+				821675FE1C2011E80017916F /* PersonInformationTableViewController.h */,
+				821675FF1C2011E80017916F /* PersonInformationTableViewController.m */,
+				821675F61C200CF00017916F /* RegisterTableViewController.m */,
 				822E3F281C1FF88600696457 /* Assets.xcassets */,
 				822E3F2A1C1FF88600696457 /* LaunchScreen.storyboard */,
 				822E3F2D1C1FF88600696457 /* Info.plist */,
@@ -247,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				822E3F2C1C1FF88600696457 /* LaunchScreen.storyboard in Resources */,
+				821675FD1C200F450017916F /* RegisterTableViewContrller.storyboard in Resources */,
 				822E3F291C1FF88600696457 /* Assets.xcassets in Resources */,
 				822E3F271C1FF88600696457 /* Main.storyboard in Resources */,
 			);
@@ -273,9 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821675F71C200CF00017916F /* RegisterTableViewController.m in Sources */,
 				822E3F241C1FF88600696457 /* ViewController.m in Sources */,
 				822E3F211C1FF88600696457 /* AppDelegate.m in Sources */,
 				822E3F1E1C1FF88600696457 /* main.m in Sources */,
+				821676001C2011E80017916F /* PersonInformationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +517,7 @@
 				822E3F481C1FF88600696457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		822E3F491C1FF88600696457 /* Build configuration list for PBXNativeTarget "TextStoryBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +526,7 @@
 				822E3F4B1C1FF88600696457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		822E3F4C1C1FF88600696457 /* Build configuration list for PBXNativeTarget "TextStoryBoardUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +535,7 @@
 				822E3F4E1C1FF88600696457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
