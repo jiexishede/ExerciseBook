@@ -13,17 +13,16 @@ typedef NS_OPTIONS(NSUInteger, PersonInformation) {
     PersonInformationNone                 = 0,
     PersonInformationLeft                 = 1 << 0,
     PersonInformationLocation             = 1 << 1,
-    PersonInformationSex                  = 1 << 2,
+    PersonInformationSex                  = 1 << 2
 };
+
+
 
 @interface PersonInformationTableViewController ()
 
 @end
 
 @implementation PersonInformationTableViewController
-
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,35 +39,59 @@ typedef NS_OPTIONS(NSUInteger, PersonInformation) {
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Tableview Method
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 3;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of row
-    if (section == 2){
-        return 1;
-    } else return 2;
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row ==0 && indexPath.section == 0 ) {
+        NSLog(@" change Head Image");
+    }
 }
 
 #pragma mark - touchEvents
 - (IBAction)back:(UIButton *)sender {
-
     if (sender.tag & PersonInformationLeft) {
         [self.navigationController popViewControllerAnimated:YES];
     }else if (sender.tag & PersonInformationLocation){
-        NSLog(@"--------------");
+        [self selectLocation];
     }else if (sender.tag & PersonInformationSex){
-        NSLog(@"======");
+        [self selectSex];
     }
-   
 }
 
 
+#pragma mark - privateMethod
+
+- (void)selectLocation{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"善长位置" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"前锋" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"选择了前锋");
+    }];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"中锋" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"选择了中锋");
+    }];
+    
+    [alertController  addAction:action0];
+    [alertController  addAction:action1];
+    [self presentViewController:alertController animated:YES completion:nil];
+
+}
+
+- (void)selectSex{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"性别" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"男" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"选择了男性");
+    }];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"选择了女性");
+    }];
+    
+    [alertController  addAction:action0];
+    [alertController  addAction:action1];
+    [self presentViewController:alertController animated:YES completion:nil];
+
+}
 
 
 /*
