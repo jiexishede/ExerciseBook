@@ -34,7 +34,7 @@
    RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id(id value) {
        return @([self isValidUsername:value]);
    }];
-    RACSignal *validPasswordSignal = [self.passwordTextField.rac_textSignal map:^id(id value) {
+   RACSignal *validPasswordSignal = [self.passwordTextField.rac_textSignal map:^id(id value) {
         return @([self isValidPassword:value]);
     }];
     
