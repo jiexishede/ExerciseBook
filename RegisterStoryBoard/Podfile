@@ -1,6 +1,10 @@
+
 platform :ios, ‘7.0’
-use_frameworks!
-pod 'ReactiveCocoa', ‘2.5’
 source 'https://github.com/CocoaPods/Specs.git'
 
+pod 'ReactiveCocoa', ‘2.5’
+
 pod 'AFNetworking', '~> 3.0'
+
+pod 'UMengAnalytics-NO-IDFA'
+
